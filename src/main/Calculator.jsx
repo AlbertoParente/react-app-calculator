@@ -5,7 +5,7 @@ import Display from '../components/Display'
 
 export default class Calculator extends Component {
     constructor(props) {
-        super()
+        super(props)
         this.clearMemory = this.clearMemory.bind(this)
         this.setOperation = this.setOperation.bind(this)
         this.addDigit = this.addDigit.bind(this)
@@ -27,7 +27,7 @@ export default class Calculator extends Component {
         return (
             <div className="calculator">
                 <Display value={100} />
-                <Button label="AC" click={this.clearMemory()} triple />
+                <Button label="AC" click={this.clearMemory} triple></Button>
                 <Button label="/" click={this.setOperation} operation />
                 <Button label="7" click={this.addDigit} />
                 <Button label="8" click={this.addDigit} />
